@@ -37,7 +37,7 @@ You can check all the laravel related dependecies [here](https://laravel.com/doc
 `docker-compose up -d`
 3. Install needed packages.<br>
 `docker exec php-fpm composer install`<br>
-
+`php artisan cache:clear`
 4. Storage log permission (sometimes an issue). <br> 
 `sudo chmod -R 777 storage/logs/ `<br>
 5. Generate key.<br>

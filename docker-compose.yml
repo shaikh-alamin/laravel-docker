@@ -6,7 +6,7 @@ networks:
 services:
   site-nginx:
     image: nginx:stable-alpine
-    container_name: nginx
+    container_name: nginx-container-php7
     ports:
       - 8090:80
     volumes:
@@ -19,9 +19,9 @@ services:
 
   php7-service:
     build:
-      context: .
+      context: ./src
       dockerfile: php.dockerfile
-    container_name: php
+    container_name: php7-container
     volumes:
       - ./src:/var/www/html:delegated
     networks:
