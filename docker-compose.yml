@@ -23,7 +23,7 @@ services:
       dockerfile: php.dockerfile
     container_name: php7-container
     volumes:
-      - ./src:/var/www/html:delegated
+      - ./src:/var/www/html
     networks:
       - laravel
 

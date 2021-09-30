@@ -32,16 +32,18 @@ You can check all the laravel related dependecies [here](https://laravel.com/doc
 1. Clone repository and setup.<br>
 `git clone git@github.com:shifatbuet/rest-api.git`<br>
 `cd rest-api`<br>
-`cp .env.example .env`<br>
+`cp src/.env.example src/.env`<br>
 2. Start docker.<br>
-`docker-compose up -d`
+`docker-compose up --build -d`
 3. Install needed packages.<br>
-`docker exec php-fpm composer install`<br>
-`php artisan cache:clear`
+`docker exec -it php7-container composer install`<br>
+
 4. Storage log permission (sometimes an issue). <br> 
-`sudo chmod -R 777 storage/logs/ `<br>
+`docker exec -it php7-container chown -R www-data:www-data storage`
+`docker exec -it php7-container chown -R www-data:www-data bootstrap`
+
 5. Generate key.<br>
-`docker exec php-fpm php artisan key:generate`<br>
+`docker exec -it php7-container php artisan key:generate`<br>
 
 <small>This way is to setup app with docker, but if you want use it without docker just skip second step and replace
  from commands `docker exec php-fpm` part. For example 3 step without Docker should look like:<br>
@@ -145,7 +147,7 @@ tail -f storage/logs/laravel-"`date +'%Y-%m-%d'`".log
 ## Format code
 
 - Find out the files that needs to be fixed :
-```sudo docker exec php-fpm composer sniff ```
+```docker exec -it php7-container composer sniff ```
 
 - Fix all the code format : 
-```sudo docker exec php-fpm composer lint ```
+```docker exec -it php7-container composer lint ```
