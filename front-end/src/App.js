@@ -66,7 +66,7 @@ function App() {
               onChange={(e) => setOperator(e.target.value)}
               id="inlineFormCustomSelect"
             >
-              <option>Choose Emoji 😃 </option>
+              <option value="">Choose Emoji 😃 </option>
               <option value="add">👽 Addition</option>
               <option value="subtract">💀 Subtraction</option>
               <option value="multiply">👻 Multiplication</option>
