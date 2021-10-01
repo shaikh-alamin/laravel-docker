@@ -60,8 +60,13 @@ You can check all the laravel related dependecies [here](https://laravel.com/doc
 | POST      | api/calculate              |           | App\Http\Controllers\CalculatorController@calculate   | api           |
 +-----------+----------------------------+-----------------+--------------------------------------------------+--------------+
 ```
+### See Result in Frontend
+```
+Open http://localhost:3003/
+```
 
-#### Example calculate request
+
+#### Example calculate request FOR API
 
 - For Linux : 
 ```bash
