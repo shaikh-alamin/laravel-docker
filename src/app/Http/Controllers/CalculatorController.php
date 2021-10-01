@@ -26,8 +26,8 @@ class CalculatorController extends BaseController
             'Calculating the inputs based on operation .',
             [
                 'input_1' => $val1,
-                'input_2'=>$val2,
-                'operator'=>$operator,
+                'input_2' => $val2,
+                'operator' => $operator,
             ]
         );
 

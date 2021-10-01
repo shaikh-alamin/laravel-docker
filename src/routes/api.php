@@ -1,3 +1,3 @@
 <?php
 
-Route::post('calculate', 'CalculatorController@calculate');
+Route::post('calculate', 'CalculatorController@calculate')->middleware('cors');

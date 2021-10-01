@@ -17,6 +17,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \App\Http\Middleware\JsonMiddleware::class,
+        \App\Http\Middleware\Cors::class,
     ];
 
     /**
@@ -59,6 +60,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'role' => \Spatie\Permission\Middlewares\RoleMiddleware::class,
         'permission' => \Spatie\Permission\Middlewares\PermissionMiddleware::class,
+        'cors' => \App\Http\Middleware\Cors::class,
     ];
 
     /**
