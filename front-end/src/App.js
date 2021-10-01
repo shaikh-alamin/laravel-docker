@@ -5,8 +5,8 @@ import { Row, Col, Form, Button } from "react-bootstrap";
 const URL = "http://localhost:8090/api/calculate";
 
 function App() {
-  const [input_1, setFirstInput] = useState("");
-  const [input_2, setSecondInput] = useState("");
+  const [input_1, setFirstInput] = useState(null);
+  const [input_2, setSecondInput] = useState(null);
   const [operation, setOperator] = useState("add");
 
   const handleSubmit = (e) => {
@@ -17,8 +17,8 @@ function App() {
       return;
     }
     const postData = {
-      input_1,
-      input_2,
+      input_1: parseInt(input_1),
+      input_2: parseInt(input_2),
       operation,
     };
 
